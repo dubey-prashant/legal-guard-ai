@@ -30,35 +30,35 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 text-sm sm:text-base;
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-6 rounded-xl border border-gray-200 transition-all duration-300 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-xl border border-gray-200 transition-all duration-300 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm sm:text-base;
   }
 
   .btn-success {
-    @apply bg-gradient-to-r from-success-600 to-success-700 hover:from-success-700 hover:to-success-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-success-500 focus:ring-offset-2;
+    @apply bg-gradient-to-r from-success-600 to-success-700 hover:from-success-700 hover:to-success-800 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-success-500 focus:ring-offset-2 text-sm sm:text-base;
   }
 
   .btn-warning {
-    @apply bg-gradient-to-r from-warning-500 to-warning-600 hover:from-warning-600 hover:to-warning-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-warning-500 focus:ring-offset-2;
+    @apply bg-gradient-to-r from-warning-500 to-warning-600 hover:from-warning-600 hover:to-warning-700 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-warning-500 focus:ring-offset-2 text-sm sm:text-base;
   }
 
   .btn-danger {
-    @apply bg-gradient-to-r from-danger-600 to-danger-700 hover:from-danger-700 hover:to-danger-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-danger-500 focus:ring-offset-2;
+    @apply bg-gradient-to-r from-danger-600 to-danger-700 hover:from-danger-700 hover:to-danger-800 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-danger-500 focus:ring-offset-2 text-sm sm:text-base;
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-soft border border-gray-100 p-6 transition-all duration-300 hover:shadow-medium;
+    @apply bg-white rounded-xl sm:rounded-2xl shadow-soft border border-gray-100 p-4 sm:p-6 transition-all duration-300 hover:shadow-medium;
   }
 
   .card-elevated {
-    @apply bg-white rounded-2xl shadow-medium border border-gray-100 p-8 transition-all duration-300 hover:shadow-large;
+    @apply bg-white rounded-xl sm:rounded-2xl shadow-medium border border-gray-100 p-6 sm:p-8 transition-all duration-300 hover:shadow-large;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-lg rounded-2xl shadow-soft border border-white/20 p-6 transition-all duration-300 hover:shadow-medium;
+    @apply bg-white/80 backdrop-blur-lg rounded-xl sm:rounded-2xl shadow-soft border border-white/20 p-4 sm:p-6 transition-all duration-300 hover:shadow-medium;
   }
 
   .gradient-bg {
@@ -66,7 +66,7 @@
   }
 
   .status-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    @apply inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-medium;
   }
 
   .status-high {
@@ -86,7 +86,7 @@
   }
 
   .icon-container {
-    @apply flex items-center justify-center w-12 h-12 rounded-xl;
+    @apply flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl;
   }
 
   .icon-primary {
@@ -138,7 +138,7 @@
   }
 
   .progress-step {
-    @apply flex items-center space-x-3;
+    @apply flex items-center space-x-2 sm:space-x-3;
   }
 
   .progress-step.active {
@@ -154,7 +154,7 @@
   }
 
   .progress-line {
-    @apply h-0.5 w-16 transition-all duration-500;
+    @apply h-0.5 w-8 sm:w-12 md:w-16 transition-all duration-500;
   }
 
   .progress-line.active {
@@ -167,5 +167,20 @@
 
   .progress-line.inactive {
     @apply bg-gray-300;
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 640px) {
+    .hover\:scale-105:hover {
+      transform: none;
+    }
+
+    .hover\:-translate-y-0\.5:hover {
+      transform: none;
+    }
+
+    .group:hover .group-hover\:scale-110 {
+      transform: none;
+    }
   }
 }
